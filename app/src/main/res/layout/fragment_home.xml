@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#E8E8EE"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout1"
+        android:layout_margin="10dp"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:paddingTop="30dp"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.5"
+                android:text="Search Book:"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:paddingTop="30dp"
+                android:paddingLeft="10dp"
+                android:layout_weight="0.5"
+                android:text="Search Book:"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="right"/>
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="1dip"
+            android:background="#000000" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.5"
+                android:id="@+id/editText"
+                android:hint="Filter..."
+                android:padding="15dp"
+                android:textColor="#000000"
+                android:background="#FFFFFF"
+                android:textSize="15dp"/>
+            <ToggleButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textOff="Traditional"
+                android:textOn="Alphabetical"
+                android:layout_weight="0.5"
+                android:textColor="#000000"
+                android:id="@+id/toggleButton1"
+                android:gravity="right"
+                android:padding="15dp"
+                android:background="#FFFFFF"
+                android:textSize="15dp"
+                android:checked="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingTop="30dp"
+            android:paddingLeft="10dp"
+            android:text="Books:"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#000000" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:choiceMode="singleChoice"
+            android:background="#ffffff"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
